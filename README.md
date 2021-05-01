@@ -2,6 +2,13 @@
 
 This package is made to ease a little "element-component" pattern development.
 
+## Options
+
+Publish config:
+```
+php artisan vendor:publish -tag=component-factory-config
+```
+
 ## TO-DO
 
 1. Put in order README file.
