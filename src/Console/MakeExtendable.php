@@ -86,14 +86,14 @@ class MakeExtendable extends Command
 
     protected function createBlade(string $fileName): void
     {
-        $this->createFile($this->viewPath.$fileName.self::EXTENSION_BLADE, '');
+        $this->createFile($this->viewPath.$fileName.self::EXTENSION_BLADE);
         $this->info('Blade is created');
     }
 
     protected function createStyle(string $fileName): void
     {
         $fileName = $this->convertStyleFilename($fileName);
-        $this->createFile($this->stylePath.$fileName.$this->getExtension($this->hasOption('sass')), '');
+        $this->createFile($this->stylePath.$fileName.$this->getExtension($this->hasOption('sass')));
         $this->info('SCSS/SASS is created');
     }
 
