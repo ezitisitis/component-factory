@@ -18,3 +18,7 @@ php artisan vendor:publish -tag=component-factory-config
 5. Create service provider.
 6. Add flag in case when livewire is in use.
 7. Comment config file.
+8. Comment and document code
+9. Add tests
+10. Add check for already existing file
+11. Refactor
