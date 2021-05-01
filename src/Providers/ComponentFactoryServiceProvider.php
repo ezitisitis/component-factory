@@ -17,7 +17,7 @@ class ComponentFactoryServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/component-factory.php',
+            __DIR__.'/../../config/component-factory.php',
             'component-factory'
         );
     }
@@ -31,7 +31,7 @@ class ComponentFactoryServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/component-factory.php' => config_path('component-factory.php'),
+                __DIR__.'/../../config/component-factory.php' => config_path('component-factory.php'),
             ], 'component-factory-config');
 
             $this->commands([
