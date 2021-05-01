@@ -1,0 +1,29 @@
+{
+    "name": "ezitisitis/component-factory",
+    "description": "Some description here",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marks Bogdanovs",
+            "email": "mail@ezitisitis.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "symfony/console": "^5.1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "EzitisItIs\\ComponentFactory\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EzitisItIs\\ComponentFactory\\ComponentFactoryServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
