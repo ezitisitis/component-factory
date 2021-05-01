@@ -1,6 +1,6 @@
 <?php
 
-namespace ComponentFactory\Console;
+namespace EzitisItIs\ComponentFactory\Console;
 
 use Illuminate\Console\Command;
 
