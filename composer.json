@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "EzitisItIs\\ComponentFactory\\ComponentFactoryServiceProvider"
+                "EzitisItIs\\ComponentFactory\\Providers\\ComponentFactoryServiceProvider"
             ]
         }
     },
