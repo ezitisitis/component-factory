@@ -10,3 +10,4 @@ This package is made to ease a little "element-component" pattern development.
 4. Create config.
 5. Create service provider.
 6. Add flag in case when livewire is in use.
+7. Comment config file.
