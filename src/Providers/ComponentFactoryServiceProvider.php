@@ -2,8 +2,8 @@
 
 namespace EzitisItIs\ComponentFactory\Providers;
 
-use EzitisItIs\ComponentFactory\Console\MakeComponentCommand;
-use EzitisItIs\ComponentFactory\Console\MakeElementCommand;
+use EzitisItIs\ComponentFactory\Console\FactoryComponentCommand;
+use EzitisItIs\ComponentFactory\Console\FactoryElementCommand;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
@@ -36,8 +36,8 @@ class ComponentFactoryServiceProvider extends ServiceProvider
             ], 'component-factory-config');
 
             $this->commands([
-                MakeComponentCommand::class,
-                MakeElementCommand::class,
+                FactoryComponentCommand::class,
+                FactoryElementCommand::class,
             ]);
         }
     }
