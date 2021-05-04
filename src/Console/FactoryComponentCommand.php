@@ -2,7 +2,7 @@
 
 namespace EzitisItIs\ComponentFactory\Console;
 
-class MakeComponentCommand extends MakeExtendable
+class FactoryComponentCommand extends FactoryExtendable
 {
     protected $viewPathConfigKey = 'path.component.view';
 
@@ -17,7 +17,7 @@ class MakeComponentCommand extends MakeExtendable
      *
      * @var string
      */
-    protected $signature = 'create:component {fileName} {--sass}';
+    protected $signature = 'factory:component {fileName} {--sass}';
 
     /**
      * The console command description.

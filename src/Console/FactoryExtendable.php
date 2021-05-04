@@ -5,7 +5,7 @@ namespace EzitisItIs\ComponentFactory\Console;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 
-class MakeExtendable extends Command
+class FactoryExtendable extends Command
 {
     const EXTENSION_BLADE = '.blade.php';
     const EXTENSION_SCSS = '.scss';
