@@ -93,8 +93,13 @@ class FactoryExtendable extends Command
     protected function createStyle(string $fileName): void
     {
         $fileName = $this->convertStyleFilename($fileName);
-        $this->createFile($this->stylePath.$fileName.$this->getExtension($this->hasOption('sass')));
-        $this->info('SCSS/SASS is created');
+        $this->createFile($this->stylePath.$fileName.$this->getExtension());
+        
+        if ($this->option('sass')) {
+            $this->info('SASS is created');
+        } else {
+            $this->info('SCSS is created');
+        }
     }
 
     protected function createFile(string $fileName): void
@@ -121,9 +126,9 @@ class FactoryExtendable extends Command
         return $return;
     }
 
-    private function getExtension(bool $hasSassOption): string
+    private function getExtension(): string
     {
-        if ($hasSassOption) {
+        if ($this->option('sass')) {
             $extension = self::EXTENSION_SASS;
         } else {
             $extension = self::EXTENSION_SCSS;
