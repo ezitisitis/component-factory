@@ -114,7 +114,12 @@ class FactoryExtendable extends Command
         $this->files->put($fileName, '');
     }
 
-    protected function getPath($fileName)
+    /**
+     * @param $fileName
+     *
+     * @return string
+     */
+    protected function getPath($fileName): string
     {
         $paths = explode('/', $fileName);
         array_pop($paths);
@@ -138,7 +143,7 @@ class FactoryExtendable extends Command
         return $extension;
     }
 
-    private function convertStyleFilename(string $fileName) : string
+    private function convertStyleFilename(string $fileName): string
     {
         if (substr_count($fileName, '/') !== 0) {
             $paths = explode('/', $fileName);
