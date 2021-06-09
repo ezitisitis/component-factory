@@ -54,8 +54,6 @@ class FactoryExtendable extends Command
     public function __construct(Filesystem $filesystem)
     {
         parent::__construct();
-        $this->viewPath  = $this->setViewsPath();
-        $this->stylePath = $this->setStylePath();
         $this->files = $filesystem;
     }
 
@@ -66,6 +64,9 @@ class FactoryExtendable extends Command
      */
     public function handle()
     {
+        $this->setViewsPath();
+        $this->setStylePath();
+
         $fileName = $this->argument('fileName');
         $this->createBlade($fileName);
         $this->createStyle($fileName);
@@ -76,12 +77,12 @@ class FactoryExtendable extends Command
 
     protected function setViewsPath()
     {
-        return config($this->viewPathConfigKey, resource_path($this->viewFallback)).'/';
+        $this->viewPath = config($this->viewPathConfigKey, resource_path($this->viewFallback)).'/';
     }
 
     protected function setStylePath()
     {
-        return config($this->stylePathConfigKey, resource_path($this->styleFallback)).'/';
+        $this->stylePath = config($this->stylePathConfigKey, resource_path($this->styleFallback)).'/';
     }
 
     protected function createBlade(string $fileName): void
