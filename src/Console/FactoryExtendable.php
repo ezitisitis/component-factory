@@ -95,7 +95,7 @@ class FactoryExtendable extends Command
     {
         $fileName = $this->convertStyleFilename($fileName);
         $this->createFile($this->stylePath.$fileName.$this->getExtension());
-        
+
         if ($this->option('sass')) {
             $this->info('SASS is created');
         } else {
@@ -126,7 +126,7 @@ class FactoryExtendable extends Command
 
         $return = '';
         foreach ($paths as $path) {
-            $return .= $path . '/';
+            $return .= $path.'/';
         }
 
         return $return;
@@ -150,12 +150,12 @@ class FactoryExtendable extends Command
 
             // TODO: refactor this
             $fileName = '';
-            $lastKey = array_search(end($paths), $paths);
+            $lastKey  = array_search(end($paths), $paths);
             foreach ($paths as $key => $path) {
                 if ($key == $lastKey) {
-                    $fileName .= '_' . $path;
+                    $fileName .= '_'.$path;
                 } else {
-                    $fileName .= $path . '/';
+                    $fileName .= $path.'/';
                 }
             }
         }
