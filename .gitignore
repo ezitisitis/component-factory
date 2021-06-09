@@ -1,0 +1,4 @@
+vendor
+
+# Artifacts
+.phpunit.result.cache
