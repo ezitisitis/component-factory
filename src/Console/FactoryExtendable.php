@@ -71,7 +71,7 @@ class FactoryExtendable extends Command
         $this->createStyle($fileName);
         $this->info('Files are created');
 
-        return 1;
+        return 0;
     }
 
     protected function setViewsPath()
