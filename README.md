@@ -45,3 +45,7 @@ php artisan vendor:publish --tag=component-factory-config
 9. Add tests
 10. Add check for already existing file
 11. Refactor
+
+## Credits
+
+- [Marks Bogdanovs](https://www.ezitisitis.com)
